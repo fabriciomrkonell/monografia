@@ -1,0 +1,30 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.53 }
+
+\bibitem[Aucouturier e Pachet 2003]{Pachet:2003}
+\abntrefinfo{Aucouturier e Pachet}{AUCOUTURIER; PACHET}{2003}
+{AUCOUTURIER, J.~J.; PACHET, F. Representing musical genre: A state of the art.
+\emph{Journal of New Music Research}, v.~32, n.~1, p. 83--93, 2003.}
+
+\bibitem[Fingerhut 1999]{Fingerhut:1999}
+\abntrefinfo{Fingerhut}{FINGERHUT}{1999}
+{FINGERHUT, M. The ircam multimedia library: A digital music library. In:  IEEE
+  FORUM ON RESEARCH AND TECHNOLOGY ADVANCES IN DIGITAL LIBRARIES, 1., 1999,
+  Baltimore, USA. \emph{Anais...} Baltimore, USA: IEEE Press, 1999. p. 19--21.}
+
+\bibitem[Kuncheva 2004]{Kuncheva:2004}
+\abntrefinfo{Kuncheva}{KUNCHEVA}{2004}
+{KUNCHEVA, L.~I. \emph{Combining Pattern Classifiers}. New Jersey:
+  Wiley-Interscience, 2004. 360~p.}
+
+\bibitem[Lyman e Varian 2003]{Lyman:2003}
+\abntrefinfo{Lyman e Varian}{LYMAN; VARIAN}{2003}
+{LYMAN, P.; VARIAN, H.~R. \emph{How much information}. 2003.
+Dispon{\'\i}vel em: $<$http://www.sims.berkeley.edu/how-much-info-2003$>$.
+  Acesso em: 25 mar. 2005.}
+
+\end{thebibliography}

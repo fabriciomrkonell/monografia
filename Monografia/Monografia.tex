@@ -1,0 +1,280 @@
+%twoside frente e verso do contrário oneside
+\documentclass[msc, oneside]{ppgiathesis}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{bigstrut}
+\usepackage{float}
+%Referências no Formato ABNT:
+\usepackage[alf]{abntcite}
+\usepackage[latin1]{inputenc}
+\usepackage[Algoritmo]{algorithm}
+\usepackage{algorithmic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hifenizacao
+
+\hyphenation{co-nhe-ci-men-to tra-ba-lhan-do com-pos-to
+a-pli-ca-do}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Nome do Aluno
+\author{FABRÍCIO MATHEUS RONCHI KONELL}
+
+% Titulo da dissertação
+\title{FRAMEWORK PARA RASTREAMENTO E MONITORAMENTO}
+
+% Orientador
+\adviser{Nome do Orientador}
+
+% Co-Orientador (Retirar se não existir)
+\coadviser{Nome do Co-orientador}
+
+% Cidade
+\address{Jaraguá do Sul}
+
+% Data
+\date{2015}
+
+% Área de Concentração
+\majorfield{Sistemas de Informação}
+
+\begin{document}
+
+% Folha de Rosto
+\frontpage
+
+% Informações
+\informations{Konell}{Fabrício Matheus Ronchi}{Rastreamento}{Monitoramento}{Localização}
+
+% Dedicatória
+\begin{dedicatory}
+A todos aqueles que de alguma forma estiveram e estão próximos de mim, fazendo esta vida valer cada vez mais a pena.
+\end{dedicatory}
+
+% Agradecimentos
+\acknowledgements
+
+Quero agradecer, em primeiro lugar, a Deus, pela força e coragem durante toda esta longa caminhada. Agradeço também a todos os professores que me acompanharam durante a gradução. Dedico esta, bem como todas as minhas demais conquistas a minha família.
+
+% Sumário (não alterar)
+\tableofcontents
+
+% Lista de Figuras (Retirar se não existir)
+\listoffigures
+
+% Lista de Tabelas (Retirar se não existir)
+\listoftables
+
+% Lista de Símbolos (Retirar se não existir)
+\listofsymbols
+
+% Lista de Abreviações (Retirar se não existir)
+\listofabreviations
+
+% Resumo
+\resumo
+
+% \noindent para não criar parágrafo (Retirar se existir parágrafo)
+\noindent Inserir o Resumo. O resumo deve conter no máximo 500
+palavras, devendo ser justificado na largura da página e escrito
+em um único parágrafo com um afastamento de na primeira linha de
+1,27 cm. O espaçamento entre linhas deve ser de 1,5 linhas. O
+resumo deve ser informativo, ou seja, é a condensação do conteúdo
+e expõe finalidades, metodologia, resultados e conclusões.
+\begin{keywords}
+    (máximo 4)
+\end{keywords}
+
+% Abstract
+\abstract
+
+% \noindent para não criar parágrafo (Retirar se existir parágrafo)
+\noindent Inserir o Abstract. O abstract é a versão do resumo para
+o inglês. Deve ser justificado na largura da página e escrito em
+um único parágrafo sem afastamento na primeira linha (como é o
+padrão em inglês). O espaçamento entre linhas deve ser de 1,5
+linhas. Aceita-se também, além do inglês, o Résumé (em francês) e
+o Zusammenfassung (em alemão).
+
+\begin{keywords}
+    (máximo 4)
+\end{keywords}
+
+% Não remover
+\mainmatter
+
+% Muda a posição e o algorísmo das páginas e reinicia o contador
+\changepage
+
+\chapter{Introdução}\label{cap_1}
+
+A introdução geral do documento pode ser apresentada através das
+seguintes seções: Desafio, Motivação, Proposta, Contribuição e
+Organização (do documento, especificando o que será tratado em
+cada um dos capítulos). O Capítulo \ref{cap_1} não contém
+subseções\footnote{Ver Capítulo \ref{cap_2} para comentários e
+exemplos de subseções.}. Este modelo foi proposto com o intuito de
+padronizar as monografias produzidas na
+Pós-Graduação do Centro Universitário Católica de Santa Catarina.
+
+Ao elaborar todo o texto da dissertação ou da tese, o mais
+indicado é o uso do verbo na forma impessoal. Exemplos:
+
+\begin{itemize}
+\item ... utilizaram-se os seguintes dados ... \item ...
+elaborou-se de forma precisa ... \item ... trata-se os algoritmos
+... \item ... foram obtidos resultados significativos ...
+\end{itemize}
+
+Além disso, deve-se a todo custo evitar a ``linguagem  de
+revista'', com expressões como ``sensacional'', ``impressionante',
+``monstruoso'', etc (por exemplo: ``Os resultados obtidos são
+sensacionais, sobretudo considerando a monstruosa margem de
+erro.'').
+
+Este modelo contém exemplos para os padrões de inserção de
+figuras, tabelas, listas de itens, bibliografia, etc. Em caso de
+dúvidas ou discordância, Pode-se entrar em contato com a direção
+ou secretaria do programa. Obviamente, críticas (construtivas) e
+sugestões são muito bem-vindas.
+
+\section{Desafio}
+Saber de onde um determinado equipamento está localizado é importante devido ao seu custo, relevância ou a sua importância. Extravios, perdas ou roubos estão cada vez mais presentes. Em um cenário de produção, localizar um determinado equipamento é essencial para manter o seu controle e a segurança. Hoje em dia, o valor para implementar sistemas de rastreamento e monitoramento estão muitos elevados no mercado, o que dificulta a sua aquisição para empresas que utilizariam em pequenas implementações. Através disso, como fazer um sistema genérico de rastreamento e monitoramento de baixo custo?
+
+\section{Motivações}
+
+Além da segurança, os sistema de rastreamento oferecem vantagens operacionais, por exemplo: saber onde determinado equipamento está localizado e quais as suas características, ou seja, sua situação atual. Através de informações em tempo real, o índice de informações não relevantes ou incorretas diminui, assim aumentando a confiabilidade da operações e transações. Sistemas de rastreamento e monitoramento são custosos, porque os hardwares utilizados para a comunicação entre equipamento(cliente) a ser rastreado e o sistema de rastreamento(servidor) são muitos elevados. Através das informações do equipamento, é possível prevenir o crescente problema de roubo ou perda de produtos, em um cenário que muitas vezes pode ser crucial. Localizar e visualizar um equipamento é essencial para os processos organizacionais, como: administração, organização e segurança, com isso, é necessário o entendimento do processo de rastreamento e monitoramento de equipamentos em um cenário de produção, através de um sistema para acesso a informações, apresentando os melhores conceitos para a sua construção e execução.
+
+\section{Objetivos gerais}
+
+Analisar e criar a melhor estratégia para rastreamento e monitoramento de equipamentos, através de hardwares de baixo custo e com fácil instalação, obtendo assim uma comunicação confiável entre equipamento(cliente) a ser rastreável e monitorável com o sistema(servidor) para acesso as informações em diferentes áreas logísticas.
+
+
+\section{Objetivos específicos}
+
+Visando o objetivo principal, alguns objetivos específicos são requeridos, entre eles:
+
+\begin{itemize}
+\item Analisar e adotar a melhor estratégia para a realização da comunicação entre o equipamento(cliente) a ser rastreado e o sistema(servidor) para acesso as informações.
+\item Desenvolver um protótipo para para rastreamento e monitramento de equipamento, através de hardwares de baixo custo. 
+\item Desenvolver um sistema WEB para consulta e visualização em tempo real dos equipamentos. 
+\item Utilizar as tecnologias de fácil entendimento para o desenvolvimento do protótipo e do sistema, são elas: Arduino, Javascript, HTML, CSS e NodeJS.
+\end{itemize}
+
+\chapter{Protótipo}\label{cap_2}
+
+O desenvolvimento do protótipo para localização e monitoramento foi desenvolvido a partir de um microcontrolador. Microcontrolador é um sistema multitarefa, que incluem periféricos, memória e processamento em tempo real. A utilização de sistemas integrados como o microcontrolador, proporciona uma maior flexibilidade e facilidade para o desenvolvimento. Através disso, o protótipo foi desenvolvido em cima da da plataforma Arduino.
+
+\section{Arduino}
+
+Nos dias de hoje, é comum o uso de microcontroladores para fins de processos industriais.  O Arduino é um microcontrolador  de prototipagem aberta baseada em software e hardware, ou seja, é um ambiente que proporciona  desenvolvimento fácil para iniciantes que não tem conhecimento em software ou eletrônica. Além de ser muito útil para o meio estudantil, é eficaz pra fins industriais. O site do Arduino se define como uma plataforma open-source de prototipagem eletrônica, baseada em flexibilidade efacilidade em utilizar hardware e software.
+
+\subsection{História}
+
+O projeto Arduino é original da Itália, e foi inciado em 2005 com objetivo de ter um meio fácil e barato para ensinar eletrônica e programação para o alunos de Design. A grande parte do sucesso da marca Arduino, é o seu custo. A placa Arduino foi utilizida neste projeto para o desenvolvimento do protótipo, com o objetivo de fazer o gerênciamento e comunicação entre o equipamento e a sistema, através de tecnologias como o GPS, que será detalhada a seguir neste trabalho.
+
+\subsection{Modelo do Arduino}	
+
+A marca Arduino é composta por diferentes tipos de placas, por exemplo: Arduino UNO, Arduino MEGA, Arduino Ethernet, entre outras. Cada placa tem uma característica que a diferência das outras. Para o desenvolvimento deste projeto foi utilizado a placa Arduino Ethernet, porque é que trás maior vantagens para fins de monitoramento e rastreamento. Algumas características que diferenciou a placa Arduino Ethernet com as demais, foram: tamanho e leitor de cartão SD integrado. 
+
+Placa Arduino UNO \ref{fig_1}:
+
+\begin{figure}[hbt!]
+  \begin{center}
+    \epsfig{file=imagem1.eps}
+    \caption{Exemplo Arduino UNO}
+    \label{fig_1}
+  \end{center}
+\end{figure}
+
+
+
+\subsection{Utilização}
+
+Apesar de ser um sistema independente, é necessário a utilização de um computador para a integração e envio do programa para a placa Arduino, a partir de uma porta USB. Sua programação é feita em linguagem C, através da IDE Arduino. O download da IDE está disponível no próprio site do Arduino\footnote{Link para download da IDE do Arduino: http://www.arduino.cc/en/Main/Software}.
+
+É possivel inserir novas funcionalidades a placa Arduino através de shields, que tem como objetivo a expanção da placa Arduino. Outros periféricos que são compatíveis com a são: motores, sensores, displays e antenas. Neste projeto foi utilizado tecnologias GPS e GPRS, através de shields, que possibilita a comunicação da placa Arduino com a internet, para fins de monitoramento e rastreamento.
+
+
+
+\section{Conclusão}
+
+Todo capítulo (com exceção da introdução e da conclusão) deve
+encerrar com uma pequena conclusão local, resumindo os tópicos
+apresentados no capítulo e preparando o leitor para o próximo
+capítulo (exceto se esse for a conclusão geral). Caso o capítulo
+tenha apresentado resultados obtidos pelo próprio autor, estes
+devem ser sucintamente relembrados aqui.
+
+\chapter{Conclusão}
+
+Inserir o texto da Conclusão. Neste capítulo devem ser
+apresentadas, clara e ordenadamente, as conclusões obtidas com
+base nos experimentos realizados e nos resultados. Dados
+quantitativos não devem aparecer na conclusão, nem tampouco
+resultados comprometedores e passíveis de discussão.
+
+Normalmente este capítulo não deve conter seções ou sub-seções.
+
+\chapter{Sobre as Referências no padrão ABNT}
+
+Para utilizar o pacote abnt-alf é necessário instalar o
+Abntex\footnote{Disponível em: http://abntex.codigolivre.org.br/}
+e estudar como utilizá-lo, visto que ele adota o padrão um pouco
+diferente para alguns campos dos arquivos .bib convencionais e
+inclui alguns novos para poder atender as normas.
+
+Alguns exemplos:
+
+\begin{itemize}
+
+\item Citação de Artigo: \cite{Pachet:2003};
+
+\item Citação de Artigo publicado em Congresso:
+\cite{Fingerhut:1999};
+
+\item Citação de Livro: \cite{Kuncheva:2004};
+
+\item Citação de Fonte on-line: \cite{Lyman:2003};
+
+\end{itemize}
+
+%Referencias:
+\bibliographystyle{abnt-alf}
+\bibliography{exemplo}
+
+\appendix
+
+\chapter{Título do Apêndice}
+
+Os apêndices são uma extensão do texto, destacados deste para
+evitar descontinuidade na sequência lógica ou alongamento
+excessivo de determinado assunto ou tópico dentro dos capítulos da
+dissertação ou da tese. São contribuições que servem para
+esclarecer, complementar, provar ou confirmar as idéias
+apresentadas no texto dos capítulos e que são importantes para a
+compreensão dos mesmos. Todos os apêndices devem vir após as
+referências bibliográficas, e devem ser enumerados por letras
+maiúsculas (A, B, C, ...).
+
+\section{Seção}
+
+Texto desta Seção. Texto desta Seção. Texto desta Seção. Texto
+desta Seção. Texto desta Seção. Texto desta Seção. Texto desta
+Seção. Texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto.
+
+\subsection{Sub-Seção}
+
+Texto desta Sub-Seção. Texto desta Sub-Seção. Texto desta
+Sub-Seção. Texto desta Sub-Seção. Texto desta Sub-Seção.
+
+
+\end{document}
